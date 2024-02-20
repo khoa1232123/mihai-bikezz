@@ -1,9 +1,10 @@
+"use client";
 import { urlFor } from "@/lib/sanity";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import AddToCart from "./AddToCart";
-import { CgEye } from "react-icons/cg";
+import { CgEye, CgShoppingBag } from "react-icons/cg";
 
 const Bike = ({ bike }) => {
   const popularBikeCat = bike.categories.find(
@@ -22,9 +23,9 @@ const Bike = ({ bike }) => {
           <Image src={urlFor(bike.image[0]).url()} width={240} height={147} alt={bike.name} />
         </div>
         <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center gap-[10px] opacity-0 group-hover:opacity-100 transition-all duration-300">
-          <AddToCart className={'btn btn-accent'} />
+          <AddToCart className={'btn-icon btn-accent'} icon={<CgShoppingBag />} />
           <Link href={`/product/${bike.slug}`}>
-            <button className="btn btn-primary">
+            <button className="btn-icon btn-primary">
               <CgEye />
             </button>
           </Link>

@@ -9,6 +9,14 @@ export default {
       type: 'string',
     },
     {
+      name: "slug",
+      title: "Product Slug",
+      type: "slug",
+      options: {
+        source: 'name',
+      }
+    },
+    {
       name: 'description',
       title: 'Product Description',
       type: 'text',
