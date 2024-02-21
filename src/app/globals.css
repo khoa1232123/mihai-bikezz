@@ -57,6 +57,10 @@
   .btn-white {
     @apply bg-white hover:bg-white/90 text-primary transition-all;
   }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
 }
 
 .popular-bike-slider .swiper-wrapper {
@@ -64,6 +68,7 @@
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
   @apply bg-accent;
 }
