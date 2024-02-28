@@ -24,7 +24,7 @@ const Header = () => {
           </h1>
         </Link>
         <div className="flex flex-row gap-6">
-          <Nav />
+          <Nav className={"flex items-center gap-[36px]"} />
           <div className="relative cursor-pointer" onClick={handleCartClick}>
             <CgShoppingBag className="text-[26px]" />
             <div className="bg-accent w-[18px] h-[18px] absolute -right-1 -top-1 rounded-full flex-center text-sm font-medium text-white">
