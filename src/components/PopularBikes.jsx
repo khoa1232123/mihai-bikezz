@@ -25,7 +25,7 @@ const getData = async () => {
 const PopularBikes = async () => {
   const bikes = await getData();
 
-  return <section>
+  return <section className="mb-40">
     <div className="container mx-auto">
         <h2 className="text-center">Most Popular Bikes</h2>
         <p className="text-center mb-[30px]">The World's Premium Brands In One Description.</p>

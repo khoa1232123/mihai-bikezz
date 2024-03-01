@@ -6,7 +6,6 @@ export default function Home() {
     <main>
       <Hero />
       <PopularBikes />
-      <div className="h-[20000px]"></div>
     </main>
   );
 }
