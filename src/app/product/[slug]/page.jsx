@@ -7,7 +7,6 @@ import {
   RefreshCw,
   ChevronLeft,
 } from "lucide-react";
-import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import AddToCart from "@/components/AddToCart";
@@ -30,6 +29,9 @@ const getData = async (slug) => {
 
 const ProductDetailPage = async ({ params }) => {
   const bike = await getData(params.slug);
+
+  console.log({bike});
+  if (!bike) return;
 
   return (
     <section className="pt-24 pb-32">
@@ -56,7 +58,7 @@ const ProductDetailPage = async ({ params }) => {
               </div>
 
               <p>{bike.description}</p>
-              <AddToCart text={"Add to cart"} className={"btn btn-accent"} />
+              <AddToCart text={"Add to cart"} bike={bike} className={"btn btn-accent"} />
             </div>
 
             <div className="bg-pink-100 flex flex-col w-full gap-2">
